@@ -11,11 +11,13 @@ int main(int argc, char **argv)
 	n=atoi(argv[1]);
 	srand(atoi(argv[2]));
 	drawCharSquare(charSquare(n), n);
-	printf("%d \n",atoi(argv[2]));	
+	
 }
 
 char **charSquare(int n)
 {
+	//nie wiem jak alokowac tablice dwuwymiarowa w jednym for
+	//pomysl uzyty przy wypisywaniu wydaje sie marny
 	char **square;
 	square=new char *[n];
 	for(int i=0;i<n;i++)
