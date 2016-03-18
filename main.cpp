@@ -29,12 +29,6 @@ char **charSquare(int n)
 
 void drawCharSquare(char **square, int n)
 {
-	for(int i=0;i<n;i++)
-		
-		{
-			for(int j=0;j<n;j++)
-			printf("%c ",square[i][j]);
-		printf("\n");
-		}
-
+	for(int i=0;i<n*n;i++)
+		i%n==n-1?printf("%c \n",square[i/n][i%n]):printf("%c ",square[i/n][i%n]);
 }
